@@ -169,7 +169,7 @@ public class Santa {
 
         writeToFile(firstChristmasItem);
 
-        boolean addItem = input.yesNo("Would you like to add another item to your Christmas list?[yes/no]:");
+        addItem = input.yesNo("Would you like to add another item to your Christmas list?[yes/no]:");
 
         do {
             String newChristmasItem = input.getString("Add an item to your  Christmas List:");
