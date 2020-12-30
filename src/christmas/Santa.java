@@ -1,4 +1,4 @@
-package Christmas;
+package christmas;
 
 import util.Input;
 
