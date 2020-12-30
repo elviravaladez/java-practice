@@ -1,5 +1,7 @@
 package Christmas;
 
+import util.Input;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -143,10 +145,56 @@ public class Santa {
 
 
 
+    //Method to writeToFiles
+    public void writeToFile(String message) throws IOException {
+        try {
+            // write the string 'message' to the FILE of THIS INSTANCE of a Santa object
+            Files.write(this.filePath, Arrays.asList(message), StandardOpenOption.APPEND);
+        } catch (IOException e) {
+            Files.write(this.filePath, Arrays.asList(e.getMessage()), StandardOpenOption.APPEND);
+            throw new IOException("Unable to write custom message to log file");
+        }
+
+    }
+
+
+    //Method to prompt user to tell Santa what they want for Christmas
+    public void santaAsks() throws IOException {
+        Input input = new Input();
+        boolean addItem = false;
+
+        String userName = input.getString("Santa here 🎅 What is your name, user?");
+
+        String firstChristmasItem = input.getString("Nice to meet you " + userName + "! \nI'm making my Christmas List for next year and \nI noticed I didn't seem to have your list. Let's fix that! \n Enter one item you would like \nfor Christmas down below:");
+
+        writeToFile(firstChristmasItem);
+
+        boolean addItem = input.yesNo("Would you like to add another item to your Christmas list?[yes/no]:");
+
+        do {
+            String newChristmasItem = input.getString("Add an item to your  Christmas List:");
+            writeToFile(newChristmasItem);
+            addItem = input.yesNo("Would you like to add another item to your Christmas list?[yes/no]:");
+        } while(addItem = true);
+
+        System.out.println("Here is your Christmas List:");
+
+        List<String> christmasList = Files.readAllLines(filePath);
+
+        for (int i = 0; i < christmasList.size(); i += 1) {
+            System.out.println((i + 1) + ": " + christmasList.get(i));
+        }
+
+        System.out.println("Goodbye!");
+    }
+
+
      //Math Method
      public static void main(String[] args) throws IOException {
         //Instantiate a Santa Object
          Santa christmasList = new Santa("data", "christmasList.txt", "christmasList.log");
-         christmasList.writeToLog("Successfully read the " + christmasList.getFileName() + " file!");
+//         christmasList.writeToLog("Successfully read the " + christmasList.getFileName() + " file!");
+
+         christmasList.santaAsks();
      }
 }
