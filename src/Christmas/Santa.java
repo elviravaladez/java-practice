@@ -89,7 +89,7 @@ public class Santa {
 
 
     //Santa Constructor
-    public Santa(String directoryName, String fileName) throws IOException {
+    public Santa(String directoryName, String fileName, String logFileName) throws IOException {
         this.directoryName = directoryName;
         this.fileName = fileName;
 
@@ -129,7 +129,24 @@ public class Santa {
     }
 
 
- public static void main(String[] args) {
 
- }
+    //Custom Method to writeToLog
+    public void writeToLog(String message) throws IOException {
+        try {
+            // write the string 'message' to the log file of THIS INSTANCE of a Santa object
+            Files.write(this.logFilePath, Arrays.asList(message), StandardOpenOption.APPEND);
+        } catch (IOException e) {
+            Files.write(this.logFilePath, Arrays.asList(e.getMessage()), StandardOpenOption.APPEND);
+            throw new IOException("Unable to write custom message to log file");
+        }
+    }
+
+
+
+     //Math Method
+     public static void main(String[] args) throws IOException {
+        //Instantiate a Santa Object
+         Santa christmasList = new Santa("data", "christmasList.txt", "christmasList.log");
+         christmasList.writeToLog("Successfully read the " + christmasList.getFileName() + " file!");
+     }
 }
