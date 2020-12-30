@@ -1,11 +1,4 @@
 public class Warmup {
-//    //Properties
-//    private int num;
-//    private int num1;
-//    private int num2;
-//    private double number1;
-//    private double number2;
-
     //Write a method called cubed that accepts integer and returns int cubed
     public static int cubed(int num) {
         return num * num * num;
