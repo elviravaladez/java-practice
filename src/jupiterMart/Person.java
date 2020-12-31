@@ -1,5 +1,7 @@
 package jupiterMart;
 
+import java.util.ArrayList;
+
 public class Person {
     //TODO: DIRECTIONS:
     // there should be a person class with properties of first name and last name.
@@ -39,14 +41,18 @@ public class Person {
 
 
 
-    //Custom Methods
-    //Method to ring up cart
-    public String ringUpCart() {
-        return "You are now ringing up your cart";
+    //Custom Method to ring up cart
+    public double ringUpCart(ArrayList<Product> products) {
+        double total = 0;
+
+        //Getting the price of each product within the ArrayList of products
+        // and adding the price to the total
+        for(Product product : products) {
+            total += product.getPrice();
+        }
+
+        System.out.printf("Your total price is: $%.2f.", total);
+        return total;
     }
 
-    //Method to ring up cart
-    public boolean canRingUpCart() {
-        return true;
-    }
 }
