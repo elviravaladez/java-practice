@@ -6,7 +6,6 @@ public class Person {
     // They should have a method that gives them the ability to ring up a cart
     // or products (may need to write later)
 
-
     //Properties
     private String firstName;
     private String lastName;

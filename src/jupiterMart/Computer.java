@@ -7,19 +7,22 @@ public class Computer extends Product{
     //Properties
     private boolean isALaptop;
 
+
+
     //Constructor
-    public Computer(Integer productId, double price, String os) {
+    public Computer(Integer productId, double price, String os, boolean isALaptop) {
         super(productId, price, os);
+        this.isALaptop = isALaptop;
     }
 
 
-    //Methods
-    @Override
-    public boolean isComputer() {
-        return true;
+
+    //Getters and Setters
+    public boolean getIsALaptop() {
+        return isALaptop;
     }
 
-    public boolean isALaptop() {
-        return true;
+    public void setIsALaptop(boolean isALaptop) {
+        this.isALaptop = isALaptop;
     }
 }

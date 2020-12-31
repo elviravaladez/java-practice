@@ -21,11 +21,6 @@ public abstract class Product {
 
 
 
-    //Non-Void Method
-    public abstract boolean isComputer();
-
-
-
     //Getters and Setters
     public int getProductId() {
         return productId;

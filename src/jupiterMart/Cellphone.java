@@ -8,15 +8,21 @@ public class Cellphone extends Product {
     private String screenSize;
 
 
+
     //Constructor
-    public Cellphone(Integer productId, double price, String os) {
+    public Cellphone(Integer productId, double price, String os, String screenSize) {
         super(productId, price, os);
+        this.screenSize = screenSize;
     }
 
 
 
-    @Override
-    public boolean isComputer() {
-        return false;
+    //Getters and Setters
+    public String getScreenSize() {
+        return screenSize;
+    }
+
+    public void setScreenSize(String screenSize) {
+        this.screenSize = screenSize;
     }
 }
