@@ -3,7 +3,7 @@ package jupiterMart;
 public abstract class Product {
     //TODO: DIRECTIONS:
     // jupiter mart carries computers and cell phones.  These products should
-    // all have product ids and prices
+    // all have product ids, prices, and OS
 
     //Properties
     private int productId;

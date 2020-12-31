@@ -2,7 +2,7 @@ package jupiterMart;
 
 public class Cellphone extends Product {
     //TODO: DIRECTIONS:
-    // cell phones should have properties for OS and screen size
+    // cell phones should have properties for screen size
 
     //Properties
     private String screenSize;

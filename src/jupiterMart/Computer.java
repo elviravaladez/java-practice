@@ -2,7 +2,7 @@ package jupiterMart;
 
 public class Computer extends Product{
     //TODO: DIRECTIONS:
-    // computers should have properties for whether it is a laptop or not (boolean) and OS
+    // computers should have properties for whether it is a laptop or not (boolean)
 
     //Properties
     private boolean isALaptop;
