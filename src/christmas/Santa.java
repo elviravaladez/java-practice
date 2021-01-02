@@ -158,25 +158,68 @@ public class Santa {
     }
 
 
+
     //Method to prompt user to tell Santa what they want for Christmas
     public void santaAsks() throws IOException {
         Input input = new Input();
-        boolean addItem = false;
+        boolean userContinues = true;
+        boolean userChoice;
 
-        String userName = input.getString("Santa here 🎅 What is your name, user?");
+        String userName = input.getString("HO! HO! HO! Santa here 🎅 What is your name, user?");
+        System.out.println("❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️");
 
-        String firstChristmasItem = input.getString("Nice to meet you " + userName + "! \nI'm making my Christmas List for next year and \nI noticed I didn't seem to have your list. Let's fix that! \n Enter one item you would like \nfor Christmas down below:");
+        System.out.printf("Nice to meet you, %S!%n", userName.toUpperCase());
 
-        writeToFile(firstChristmasItem);
+        System.out.println("\nI'm making my Christmas List for next year and \nI noticed I didn't seem to have your list. \n\nLet's fix that!\n");
+        System.out.println("❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️");
 
-        addItem = input.yesNo("Would you like to add another item to your Christmas list?[yes/no]:");
 
+
+        //User Prompt
         do {
-            String newChristmasItem = input.getString("Add an item to your  Christmas List:");
-            writeToFile(newChristmasItem);
-            addItem = input.yesNo("Would you like to add another item to your Christmas list?[yes/no]:");
-        } while(addItem = true);
+            System.out.println("Add one item to your Christmas List:");
+            String newItem = input.getString();
 
+            writeToFile(newItem);
+
+            userChoice = input.yesNo("Would you like to finalize your Christmas List?[yes/no]:");
+
+            //Conditional to see if user wants to create a grocery list
+            if(userChoice) {
+                System.out.println("❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️");
+                System.out.printf("Thank you for your input, %S!%n", userName);
+                System.out.println("Here is your Christmas List:");
+
+                List<String> christmasList = Files.readAllLines(filePath);
+
+                for (int i = 0; i < christmasList.size(); i += 1) {
+                    System.out.println((i + 1) + ": " + christmasList.get(i));
+                }
+
+                System.out.println("❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️");
+
+
+                userContinues = false;
+
+            } else {
+                String anotherNewItem = input.getString("Enter a new item to add to your Christmas List:");
+
+                writeToFile(anotherNewItem);
+
+                //Asking user if they want to finalize their list
+                boolean newUserChoice = input.yesNo("Would you like to finalize your Christmas List?[yes/no]:");
+
+                //Conditional to see if user wants to finalize their list
+                if(!newUserChoice) {
+                    userContinues = false;
+                }
+            }
+
+        } while(userContinues);
+
+
+        System.out.println("❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️");
+        System.out.printf("Thank you for your input, %S!%n", userName);
         System.out.println("Here is your Christmas List:");
 
         List<String> christmasList = Files.readAllLines(filePath);
@@ -185,7 +228,7 @@ public class Santa {
             System.out.println((i + 1) + ": " + christmasList.get(i));
         }
 
-        System.out.println("Goodbye!");
+        System.out.println("❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️");
     }
 
 
@@ -193,7 +236,6 @@ public class Santa {
      public static void main(String[] args) throws IOException {
         //Instantiate a Santa Object
          Santa christmasList = new Santa("data", "christmasList.txt", "christmasList.log");
-//         christmasList.writeToLog("Successfully read the " + christmasList.getFileName() + " file!");
 
          christmasList.santaAsks();
      }
