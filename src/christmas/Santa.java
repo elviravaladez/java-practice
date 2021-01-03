@@ -21,6 +21,10 @@ public class Santa {
     private List<String> fileLines;
     private List<String> logFileLines;
 
+    //public static Array property that stores 9 (or 10) instances of Reindeer objects
+    public static Reindeer[] reindeers = new Reindeer[10];
+
+
 
 
     //Getters and Setters for properties
@@ -217,15 +221,18 @@ public class Santa {
     }
 
 
+
+
+
      //Math Method
      public static void main(String[] args) throws IOException {
-//        //Instantiate a Santa Object
+//        //TODO: Instantiate a Santa Object
 //         Santa christmasList = new Santa("data", "christmasList.txt", "christmasList.log");
 //
 //         christmasList.santaAsks();
 
 
-         //Creating Instances of Santa's Reindeer
+         //TODO: Creating Instances of Santa's Reindeer
          Reindeer dasher = new Reindeer("Dasher");
          Reindeer dancer = new Reindeer("Dancer");
          Reindeer prancer = new Reindeer("Prancer");
@@ -236,5 +243,27 @@ public class Santa {
          Reindeer blitzen = new Reindeer("Blitzen");
          Reindeer rudolph = new Reindeer("Rudolph");
          Reindeer olive = new Reindeer("Olive");
+
+
+
+         //TODO: Give each Reindeer instance a position in the Array you just created.
+         // Array was created at the top of the class (see properties for santa class).
+         reindeers[0] = dasher;
+         reindeers[1] = dancer;
+         reindeers[2] = prancer;
+         reindeers[3] = vixen;
+         reindeers[4] = comet;
+         reindeers[5] = cupid;
+         reindeers[6] = donner;
+         reindeers[7] = blitzen;
+         reindeers[8] = rudolph;
+         reindeers[9] = olive;
+
+         //Printing contents within Array to assure they were saved at the appropriate
+         //position within the Array
+         for(Reindeer reindeer : reindeers) {
+             System.out.println(reindeer.getName());
+         }
+
      }
 }
