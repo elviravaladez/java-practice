@@ -219,9 +219,22 @@ public class Santa {
 
      //Math Method
      public static void main(String[] args) throws IOException {
-        //Instantiate a Santa Object
-         Santa christmasList = new Santa("data", "christmasList.txt", "christmasList.log");
+//        //Instantiate a Santa Object
+//         Santa christmasList = new Santa("data", "christmasList.txt", "christmasList.log");
+//
+//         christmasList.santaAsks();
 
-         christmasList.santaAsks();
+
+         //Creating Instances of Santa's Reindeer
+         Reindeer dasher = new Reindeer("Dasher");
+         Reindeer dancer = new Reindeer("Dancer");
+         Reindeer prancer = new Reindeer("Prancer");
+         Reindeer vixen = new Reindeer("Vixen");
+         Reindeer comet = new Reindeer("Comet");
+         Reindeer cupid = new Reindeer("Cupid");
+         Reindeer donner = new Reindeer("Donner");
+         Reindeer blitzen = new Reindeer("Blitzen");
+         Reindeer rudolph = new Reindeer("Rudolph");
+         Reindeer olive = new Reindeer("Olive");
      }
 }
