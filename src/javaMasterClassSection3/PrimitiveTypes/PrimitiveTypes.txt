@@ -1,0 +1,32 @@
+PRIMITIVE TYPES
+---------------
+Each Primitive Type occupies a different amount of memory.
+
+byte
+    - occupies 8 bits
+    - has a width of 8
+    - Not often used b/c the space is quite small
+short
+    - occupies 16 bits
+    - has a width of 16
+int
+    - occupies 32 bits
+    - has a width of 32
+
+---------------
+
+Integer is a Wrapper Class
+ - Java uses the concept of a Wrapper class for all eight primitive types - In the case of an int, we can use Integer, and by doing so it gives us ways to perform operations on an int.
+
+-----------------------
+Overflow and Underflow
+-----------------------
+
+NOTE: If you try and put a value larger than the maximum value in Java,
+      or a value smaller than the minimum value in Java, then you will
+      get an OVERFLOW in the case of the maximum value or
+      an UNDERFLOW in the case of the minimum.
+
+      The computer just skips back to the min. number or the max. number, which is
+      usually not what you want.
+
