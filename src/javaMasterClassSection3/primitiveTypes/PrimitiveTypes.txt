@@ -2,6 +2,16 @@ PRIMITIVE TYPES
 ---------------
 Each Primitive Type occupies a different amount of memory.
 
+    8 Types
+        1. int (most common)
+        2. double (most common)
+        3. boolean (most common)
+        4. long (may use from time to time)
+        5. char (may use from time to time)
+        6. byte (rarely used, if at all)
+        7. short (rarely used, if at all)
+        8. float (rarely used, if at all)
+
 byte
     - occupies 8 bits
     - has a width of 8
@@ -36,4 +46,3 @@ NOTE: If you try and put a value larger than the maximum value in Java,
 
       The computer just skips back to the min. number or the max. number, which is
       usually not what you want.
-
