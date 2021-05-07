@@ -1,4 +1,4 @@
-package javaMasterClassSection3.PrimitiveTypes;
+package javaMasterClassSection3.primitiveTypes;
 
 public class Int {
     public static void main(String[] args) {

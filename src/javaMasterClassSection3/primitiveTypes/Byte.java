@@ -1,4 +1,4 @@
-package javaMasterClassSection3.PrimitiveTypes;
+package javaMasterClassSection3.primitiveTypes;
 
 public class Byte {
     public static void main(String[] args) {

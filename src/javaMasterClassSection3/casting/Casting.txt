@@ -1,0 +1,9 @@
+-------
+CASTING
+-------
+To treat or convert a number from one type to another.
+We put the type we want the number to be in parenthesis like this:
+
+    Example Code:
+
+        byte myNewByteValue = (byte) (myMinByteValue / 2);

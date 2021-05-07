@@ -1,4 +1,4 @@
-package javaMasterClassSection3.PrimitiveTypes;
+package javaMasterClassSection3.primitiveTypes;
 
 public class Short {
     public static void main(String[] args) {
