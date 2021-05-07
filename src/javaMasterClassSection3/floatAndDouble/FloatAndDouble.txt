@@ -1,0 +1,38 @@
+----------------
+FLOAT AND DOUBLE
+----------------
+
+Floating point numbers
+     - have fractional parts that we express with a decimal point
+        Ex: 3.14159
+
+     - known as real numbers
+     - used when we need more precision in calculations
+     - The double data type is accepted by default for floating point numbers
+
+
+FLOAT
+    - single precision number
+    - has a range from 1.4E-45 to 3.4028235E+38
+    - end float with "f" OR cast, recommended to use "f"
+    - NOT RECOMMENDED to use float
+
+    Ex:
+        float myFloatValue = 5.25f; (preferred method)
+        float myFloatValue = (float)5.25;
+
+
+DOUBLE
+    - double precision number
+    - more precise
+    - has a range from 4.9E-324 to 1.7976931348623157E+308
+    - end double with "d"
+    - BEST to use DOUBLE
+
+
+Precision refers to the format and amount of space accupied by the type.
+    - Single precision occupies 32 bits
+        - Width of 32
+
+    - Double precision occupies 64 bits
+        - Width of 64
