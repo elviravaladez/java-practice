@@ -13,6 +13,13 @@ int
     - occupies 32 bits
     - has a width of 32
 
+long
+    - occupies 64 bits
+    - has a width of 64
+    - best practice to use an uppercase "L" when assigning a long
+        Ex: long myExampleLong = 100L;
+    - an int fits fully into a long, so if you assign an int into a long, it converts an int into a long, without throwing an error
+        Ex: long myExampleLong = 100; //this will still work
 ---------------
 
 Integer is a Wrapper Class

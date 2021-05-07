@@ -7,5 +7,7 @@ public class Short {
 
         System.out.println("Short Minimum Value = " + myMinShortValue); //Short Minimum Value = -32768
         System.out.println("Short Maximum Value = " + myMaxShortValue); //Short Maximum Value = 32767
+
+//        short bigShortLiteralValue = 32768; //error: is an int (need a short or cast)
     }
 }
