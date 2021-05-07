@@ -1,0 +1,32 @@
+----
+CHAR
+----
+
+char
+    - occupies 2 bytes of memory
+    - occupies 16 bits
+    - has a width of 16
+    - saves only one character
+
+    - the reason it's NOT a single byte is b/c it allows you to store UNICODE CHARACTERS
+
+    - Ex: use when storing the last key press or single digit, storing data in arrays
+
+Unicode
+    International encoding standard for use w/diff. languages and scripts by which each
+    letter, digit, or symbol is assigned a unique numeric value that applies across
+    diff. platforms and programs.
+
+    Unicode allows us to represent languages that need more characters.
+
+    The way it works is by using a combo. of the TWO BYTES that a CHAR takes up
+    in memory it can represent and one of 65535 diff. types of characters.
+
+
+-------
+BOOLEAN
+-------
+
+    A boolean in Java is a primitive type, it can be set to two values only
+        -TRUE
+        -FALSE

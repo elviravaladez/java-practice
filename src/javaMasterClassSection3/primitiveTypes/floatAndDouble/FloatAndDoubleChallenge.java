@@ -1,4 +1,4 @@
-package javaMasterClassSection3.floatAndDouble;
+package javaMasterClassSection3.primitiveTypes.floatAndDouble;
 
 public class FloatAndDoubleChallenge {
     public static void main(String[] args) {
