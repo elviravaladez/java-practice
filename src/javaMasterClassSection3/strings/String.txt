@@ -6,5 +6,6 @@ String
     - A reference type
     - A sequence of characters
     - It's limited by memory or the MAX_VALUE of an int (2.14 Billion)
+    - Are IMMUTABLE
 
     Can use Unicode with strings as well.
