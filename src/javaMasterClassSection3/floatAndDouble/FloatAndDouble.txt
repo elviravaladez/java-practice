@@ -28,6 +28,7 @@ DOUBLE
     - has a range from 4.9E-324 to 1.7976931348623157E+308
     - end double with "d"
     - BEST to use DOUBLE
+    - is faster to process on many modern computers in comparison to float
 
 
 Precision refers to the format and amount of space accupied by the type.
@@ -36,3 +37,12 @@ Precision refers to the format and amount of space accupied by the type.
 
     - Double precision occupies 64 bits
         - Width of 64
+
+
+BIGDECIMAL
+    In general, float and double are great for general floating point operations.
+    BUT both are NOT great to use where precise calculations are REQUIRED. This is
+    due to a LIMITATION with how floating point numbers are stored, and NOT a
+    Java problem.
+
+    The "BigDecimal" Java class overcomes this.
