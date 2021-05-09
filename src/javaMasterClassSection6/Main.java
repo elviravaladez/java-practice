@@ -41,14 +41,7 @@ public class Main {
         person.setLastName("Smith");
         System.out.println("fullName = " + person.getFullName()); //fullName = John Smith
 
-        //TODO: Create a new class for a bank account
-        // Create fields for the account number, balance, customer name, email and phone number
-        // Create getters and setters for each field
-        // Create two additional methods
-        //      1. To allow the customer to deposit funds (this should increment the balance filed)
-        //      2. To allow the customer to withdraw funds. This should deduct from the balance field, but not allow the withdrawal to computer if there are insufficient funds.
-        // You will want to create various code in the Main class to confirm your code is working
-        // Add some System.out.println() in the two methods above as well
+        //TODO: BankAccount
         BankAccount emptyAccount = new BankAccount(); //Empty constructor called
         BankAccount corysAccount = new BankAccount("2343", 10.00, "Cory Matthews", "cory.matthews@gmail.com", "123456789"); //calling the constructor
 
@@ -101,5 +94,13 @@ public class Main {
         System.out.println("distance(2,2): " + first.distance(2, 2)); //distance(2,2): 5.0
         Point point = new Point();
         System.out.println("distance(): " + point.distance()); //distance(): 0.0
+
+        //TODO: Animal
+        Animal animal = new Animal("Animal", 1, 1, 5, 5);
+        Dog dog = new Dog("Yorkie", 8, 20, 2, 4, 1, 20, "long silky");
+        dog.eat();
+        //Dog.eat() called
+        //Dog.chew() called
+        //Animal.eat() called
     }
 }
