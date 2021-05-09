@@ -36,6 +36,10 @@ public class BankAccount {
         this.customerPhoneNumber = customerPhoneNumber;
     }
 
+    public BankAccount(String customerName, String customerEmailAddress, String customerPhoneNumber) {
+        this("99999", 100.55, customerName, customerEmailAddress, customerPhoneNumber);
+    }
+
     //Getters and Setters
     public String  getAccountNumber() {
         return this.accountNumber;

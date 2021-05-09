@@ -70,5 +70,18 @@ public class Main {
         corysAccount.withdrawal(100.00);
         //Withdrawal of $100.00 processed. Remaining balance is: $11.00
 
+        BankAccount shawnsAccount = new BankAccount("Shawn Hunter", "shawn.hunter@gmail.com", "12345");
+        System.out.println(shawnsAccount.getAccountNumber() + " Customer Name: " + shawnsAccount.getCustomerName());
+
+        //TODO: VipCustomer
+        VipCustomer vipCustomer1 = new VipCustomer();
+        System.out.println(vipCustomer1.getName());
+
+        VipCustomer vipCustomer2 = new VipCustomer("Topanga Lawrence", 2500.00);
+        System.out.println(vipCustomer2.getName());
+
+        VipCustomer vipCustomer3 = new VipCustomer("Eric Matthews", 100.00, "eric.matthews@gmail.com");
+        System.out.println(vipCustomer3.getName());
+        System.out.println(vipCustomer3.getEmailAddress());
     }
 }
