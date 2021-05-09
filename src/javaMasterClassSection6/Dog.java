@@ -29,4 +29,26 @@ public class Dog extends Animal { //extends mean inheriting
         System.out.println("Dog.chew() called");
     }
 
+    public void walk() {
+        System.out.println("Dog.walk() called");
+//      super.move(5); //don't try to execute the move method in this class, use the one in the Animal class
+        move(5);
+    }
+
+    public void run() {
+        System.out.println("Dog.run() called");
+        move(10);
+    }
+
+    private void moveLegs(int speed) {
+        System.out.println("Dog.moveLegs() called");
+    }
+
+    @Override
+    public void move(int speed) {
+        System.out.println("Dog.move() called");
+        moveLegs(speed);
+        super.move(speed);
+    }
+
 }

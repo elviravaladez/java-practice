@@ -102,5 +102,18 @@ public class Main {
         //Dog.eat() called
         //Dog.chew() called
         //Animal.eat() called
+
+        dog.walk();
+        //Dog.walk() called
+        //Animal is moving at 5 speed
+
+        dog.run();
+        //Dog.run() called
+        //Dog.move() called
+        //Dog.moveLegs() called
+        //Animal.move() called.
+        //Animal is moving at 10 speed
+
+
     }
 }
