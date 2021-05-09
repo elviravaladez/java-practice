@@ -40,5 +40,35 @@ public class Main {
         System.out.println("teen = " + person.isTeen()); //teen = true
         person.setLastName("Smith");
         System.out.println("fullName = " + person.getFullName()); //fullName = John Smith
+
+        //TODO: Create a new class for a bank account
+        // Create fields for the account number, balance, customer name, email and phone number
+        // Create getters and setters for each field
+        // Create two additional methods
+        //      1. To allow the customer to deposit funds (this should increment the balance filed)
+        //      2. To allow the customer to withdraw funds. This should deduct from the balance field, but not allow the withdrawal to computer if there are insufficient funds.
+        // You will want to create various code in the Main class to confirm your code is working
+        // Add some System.out.println() in the two methods above as well
+        BankAccount emptyAccount = new BankAccount(); //Empty constructor called
+        BankAccount corysAccount = new BankAccount("2343", 10.00, "Cory Matthews", "cory.matthews@gmail.com", "123456789"); //calling the constructor
+
+        System.out.println("----------------------------------");
+        System.out.println("Account Information for Account #" + corysAccount.getAccountNumber());
+        System.out.println("----------------------------------");
+        System.out.println("Customer Name: " + corysAccount.getCustomerName());
+        System.out.println("Email: " + corysAccount.getCustomerEmailAddress());
+        System.out.println("Phone Number: " + (corysAccount.getCustomerPhoneNumber()).replaceFirst("(\\d{3})(\\d{3})(\\d+)", "($1) $2-$3"));
+        System.out.printf("Balance: $%,.2f%n",corysAccount.getBalance());
+
+        corysAccount.withdrawal(100.00);
+        //Only $10.00 available. Withdrawal not processed
+        corysAccount.deposit(50.00);
+        //Deposit of $50.00 made. New balance is $60.00
+        corysAccount.withdrawal(100.00);
+        //Only $60.00 available. Withdrawal not processed
+        corysAccount.deposit(51.00);
+        corysAccount.withdrawal(100.00);
+        //Withdrawal of $100.00 processed. Remaining balance is: $11.00
+
     }
 }

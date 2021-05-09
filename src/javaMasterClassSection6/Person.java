@@ -45,7 +45,7 @@ public class Person {
         } else if(firstName.isEmpty()) {
             return this.lastName;
         } else {
-            return (firstName + " " + lastName);
+            return (this.firstName + " " + this.lastName);
         }
     }
 }
