@@ -83,5 +83,14 @@ public class Main {
         VipCustomer vipCustomer3 = new VipCustomer("Eric Matthews", 100.00, "eric.matthews@gmail.com");
         System.out.println(vipCustomer3.getName());
         System.out.println(vipCustomer3.getEmailAddress());
+
+        //TODO: Wall
+        Wall wall = new Wall(5, 4);
+        System.out.println("Area: " + wall.getArea()); //Area: 20.0
+
+        wall.setHeight(-1.5);
+        System.out.println("Width: " + wall.getWidth()); //Width: 5.0
+        System.out.println("Height: " + wall.getHeight()); //Height: 0.0
+        System.out.println("Area: " + wall.getArea()); //Area: 0.0
     }
 }
