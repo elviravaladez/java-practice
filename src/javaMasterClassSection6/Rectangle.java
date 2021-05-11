@@ -1,26 +1,20 @@
 package javaMasterClassSection6;
 
-public class Rectangle {
-    private int x;
-    private int y;
+public class Rectangle extends Shape {
     private int width;
     private int height;
 
     //TODO: Create an example of constructor chaining
 
     //1st constructor
-    public Rectangle() {
-        this(0, 0); //calls 2nd constructor
+    public Rectangle(int x, int y) {
+        this(x, y, 0, 0); //calls 2nd constructor
     }
 
-    public Rectangle(int width, int height) {
-        this(0, 0, width, height); //calls 3rd constructor
-    }
-
+    //2nd constructor
     public Rectangle(int x, int y, int width, int height) {
         //initialize variables
-        this.x = x;
-        this.y = y;
+        super(x, y); //calls constructor from the parent (Shape)
         this.width = width;
         this.height = height;
     }
