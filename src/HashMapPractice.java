@@ -6,7 +6,7 @@ public class HashMapPractice {
         int b = 3;
         int c = 88;
 
-        HashMap<String, Integer> happy = new HashMap<String, Integer>();
+        HashMap<String, Integer> happy = new HashMap<>();
         happy.put("a", 10);
         happy.put("b", 3);
         happy.put("c", 88);
