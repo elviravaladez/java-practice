@@ -14,7 +14,7 @@ public class HashMapPractice {
         System.out.println(happy); //{a=10, b=3, c=88}
         System.out.println(happy.get("c")); //88
 
-        HashMap<String, String> fun = new HashMap<String, String>();
+        HashMap<String, String> fun = new HashMap<>();
         fun.put("bobbyJoe1990", "p455w0rd");
         fun.put("helloKittyFan21", "catsG4l0r3");
         fun.put("coolGuySwag", "FluffyP0n135");
