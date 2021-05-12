@@ -48,6 +48,10 @@ public class ArrayPractice {
             700, 800, 900, 1000
         };
 
+        for(int i = 0; i < anotherArray.length; i++) {
+            System.out.println(anotherArray[i]);
+        }
+
         String[] copyFrom = {
                 "Affogato", "Americano", "Cappuccino", "Corretto", "Cortado",
                 "Doppio", "Espresso", "Frappucino", "Freddo", "Lungo", "Macchiato",
