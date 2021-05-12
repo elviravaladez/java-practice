@@ -30,5 +30,13 @@ public class HashMapPractice {
 
         System.out.println(fun.keySet()); //[helloKittyFan21, bobbyJoe1990, coolGuySwag]
         System.out.println(fun.values()); //[catsG4l0r3, b3tt3rP@55w0rd, FluffyP0n135]
+
+        HashMap<String, String> usernames = new HashMap<>();
+        usernames.put("John", "johnny1");
+        usernames.put("Jane", "janie1");
+        usernames.put("Jack", "jacky1");
+        System.out.println(usernames);//{John=johnny1, Jack=jacky1, Jane=janie1}
+        System.out.println(usernames.keySet());//[John, Jack, Jane]
+        System.out.println(usernames.values());//[johnny1, jacky1, janie1]
     }
 }
