@@ -115,5 +115,9 @@ public class Main {
         //Animal is moving at 10 speed
 
 
+        Mazda miata = new Mazda(36);
+        miata.steer(45);
+        miata.accelerate(30);
+        miata.accelerate(20);
     }
 }
