@@ -1,4 +1,4 @@
-package javamasterclasssection3.operatorsOperandsAndExpressions;
+package javamasterclasssection3.operatorsoperandsandexpressions;
 
 public class Operators {
     public static void main(String[] args) {

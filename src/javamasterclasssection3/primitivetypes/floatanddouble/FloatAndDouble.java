@@ -1,4 +1,4 @@
-package javamasterclasssection3.primitiveTypes.floatAndDouble;
+package javamasterclasssection3.primitivetypes.floatanddouble;
 
 public class FloatAndDouble {
     public static void main(String[] args) {
